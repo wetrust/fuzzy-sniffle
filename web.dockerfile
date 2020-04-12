@@ -5,4 +5,4 @@ RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev lib
     --with-jpeg \
   && docker-php-ext-install gd pdo pdo_mysql && \
     apk del --no-cache freetype-dev libpng-dev libjpeg-turbo-dev \
-  echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
+  && echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
